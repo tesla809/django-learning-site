@@ -9,3 +9,7 @@ class Course(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=255)
     description = models.TextField()
+
+    def __str__(self):
+        """Return title of course as string for string related actions."""
+        return self.title
